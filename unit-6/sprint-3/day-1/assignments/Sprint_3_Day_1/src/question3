@@ -1,0 +1,23 @@
+Q3/- What are the challenges of developing an Enterprise application?
+
+Ans-->>>>>>>
+
+
+--An Enterprise application is bydefault a distributed application, 
+because EA is divided into seperate modules, and each module can be a independent
+application, here each module will collaborate with each other and provide services
+as whole.
+
+1. data security : the data exchange should be encrypted and decripted, authentication and
+           authorization is also required.
+
+2. client can access the application in a platform and language independent form.
+i.e by making our presentation logic web-enabled. so client can access our application
+through the web-browser.
+
+Presentation could be in GUI : that can be accessed by the browser (webapplication)
+they are not reusable.
+
+Presentation could be in the form raw data (JSON or xml format)  (webservices)
+they are the reusable 
+

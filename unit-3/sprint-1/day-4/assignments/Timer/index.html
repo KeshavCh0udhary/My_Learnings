@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1>Counter :-</h1>
+    <h2 id="count"></h2>
+    <input type="text" id="text" placeholder="Type Here">
+    <button>Stop</button>
+</body>
+
+</html>
+
+<script>
+    let Name = "Krishna Keshav";
+    function counter() {
+        let count = 0;
+        let Text = document.getElementById("text");
+        let counter = setInterval(function () {
+            if (text.value === Name) {
+                alert("You Won Man");
+                clearInterval(counter);
+            }
+            if (count === 10) {
+                text.disabled = true;
+                alert("You loss Man");
+                clearInterval(counter);
+            }
+            document.getElementById("count").innerText = count;
+            count++;
+        }, 1000);
+    }
+    counter();
+</script>

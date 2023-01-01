@@ -1,0 +1,14 @@
+Q2) Explain about Hashcode and Equals Method.
+
+Answer :-
+
+Hashcode Method :---
+
+The value returned by hashCode() is the object's hashCode, which is the object's memory address in hexadecimal. 
+
+
+Equals Method :---
+
+equals() checks if the two object references are same. If two objects are equal then their haseCode must be the 
+
+same, but the reverse is not possible.

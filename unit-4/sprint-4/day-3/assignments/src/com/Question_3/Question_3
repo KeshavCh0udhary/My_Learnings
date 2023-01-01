@@ -1,0 +1,10 @@
+Q3) Explain the difference between equals() and HashCode() Method.
+
+Answer :- 
+equals() method :---
+equals() checks if the two object references are same. If two objects are equal then their hashCode must be the 
+same, but the reverse is not true.
+
+
+HashCode() Method :---
+The value returned by hashCode() is the object's hash code, which is the object's memory address in hexadecimal. 

@@ -1,0 +1,6 @@
+Q; Explain why Java is platform independent ?
+Answer;  Java Compiler produce a unique type of code called by byte code unlike c compiler where compiler produces only natively execuatable code 
+for a particular machine.
+When the Java program runs in a particular machine it is sent to java compiler, which converts this code into intermediate code called byte code.
+This byte code is sent to java virtual machine which resides in the RAM of any operating system. JVM recognizes the platform it is on and converts 
+the byte codes into native machine code. Hence java is called platform independent language.

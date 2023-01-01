@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Counter {
+            margin: auto;
+            width: 10%;
+            height: 40px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: pink;
+            position: sticky;
+            top: 0px;
+            z-index: 20;
+
+        }
+
+        #Container {
+            margin: auto;
+            width: 90%;
+            /* height: 500px; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            border-radius: 10px;
+        }
+
+        .product {
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        }
+
+        .product>p {
+            margin-left: 10px;
+        }
+
+        .product>h4 {
+            margin-left: 10px;
+        }
+
+        .product>img {
+            width: 100%;
+            border-top-left-radius: 15px;
+            border-top-right-radius: 15px;
+        }
+
+        #remove {
+            width: 70px;
+            padding: 6px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border: 1px solid transparent;
+        }
+
+        #sold {
+            width: 70px;
+            padding: 6px;
+            margin-left: 20px;
+            margin-bottom: 10px;
+            border: 1px solid transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Counter">
+    </div>
+    <div id="Container">
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    let ProductDetails = JSON.parse(localStorage.getItem("Products")) || [];
+    document.getElementById("Counter").innerText = ProductDetails.length;
+    DisplayData(ProductDetails);
+    function DisplayData(ProductDetails) {
+        document.querySelector("#Container").innerHTML = null;
+
+        ProductDetails.forEach(function (ele, i) {
+            let DIV = document.createElement("div");
+            DIV.setAttribute("class", "product");
+            let Image = document.createElement("img");
+            Image.src = ele.Image;
+            let ProductNamE = document.createElement("h4");
+            ProductNamE.innerText = ele.ProductName;
+            let Categorie = document.createElement("p");
+            Categorie.innerText = ele.Categories;
+            let Price = document.createElement("p");
+            Price.innerText = ele.Price;
+            let GendeR = document.createElement("p");
+            GendeR.innerText = ele.Gender;
+            let Button1 = document.createElement("button");
+            Button1.innerText = "Remove";
+            Button1.setAttribute("id", "remove");
+            Button1.addEventListener("click", function () {
+                RemoveItem(i);
+            });
+            let Button = document.createElement("button");
+            Button.innerText = "Sold";
+            Button.setAttribute("id", "sold");
+            Button.addEventListener("click", function () {
+                Toggle(ele, i);
+            });
+
+            DIV.append(Image, ProductNamE, Categorie, Price, GendeR, Button1, Button)
+
+            document.querySelector("#Container").append(DIV);
+            //console.log(DIV);
+
+        });
+    }
+
+
+
+    function RemoveItem(i) {
+        ProductDetails = ProductDetails.filter(function (ele, index) {
+            return i != index;
+        });
+        localStorage.setItem("Products", JSON.stringify(ProductDetails));
+        DisplayData(ProductDetails);
+        document.getElementById("Counter").innerText = ProductDetails.length;
+    }
+
+    function Toggle(ele, index) {
+        if (ele.Sold == true) {
+            ele.Sold = false;
+            document.getElementById("sold").style.backgroundColor = "green";
+        }
+        else if (ele.Sold == false) {
+            ele.Sold = true;
+            document.getElementById("sold").style.backgroundColor = "red";
+        }
+
+        console.log(ele.Sold);
+    }
+
+    document.getElementById("Counter").innerText = ProductDetails.length;
+
+
+
+</script>

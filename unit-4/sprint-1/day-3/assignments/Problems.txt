@@ -1,0 +1,59 @@
+Q1) The set of positive numbers starting from 1 is known as Natural Numbers. The sum of
+the first N natural numbers is given by the formula [N * (N + 1)] / 2 For example, given a
+number 5, the sum of the first 5 natural numbers will be[5 * (6)]/2 = 15
+● Write a Java class with a static method that will take a number as a parameter, and print the
+sum of the natural number from 1 to the number supplied as the method argument.
+● Call the above-defined method from the main method of that class by supplying any number
+as an argument and print the result.
+
+Ans : 
+Github link :- https://github.com/masai-course/Krishna_fw19_0681/blob/master/unit-4/sprint-1/day-3/assignments/src/com/Sum/Sum.java
+
+
+Q2) The prime factors of a number are all of the integers below that number that are
+divisible into the number as well as 1. For example, the prime factors of 12 are 1,2,3,4,6,
+and 12.
+● Write a Java class with a static method that will take a number and print all the prime factorial
+of that number.
+● The Supplied number should be between 2 and 100. otherwise, it should print “Invalid
+number”.
+● Call this method from the main method by supplying any valid argument.
+
+Ans :
+Github Link :- https://github.com/masai-course/Krishna_fw19_0681/blob/master/unit-4/sprint-1/day-3/assignments/src/com/PrimeFactor1/Prime.java
+
+Q3) Define Wrapper Classes in Java.
+
+Ans : A Wrapper class is a class whose object wraps or contains primitive data types. When we create an
+object to a wrapper class, it contains a field and in this field, we can store primitive data types. In
+other words, we can wrap a primitive value into a wrapper class object.
+
+
+Q4) Explain why the following block of code will give a compile time error?
+public class Main {
+public static void main(String[] args) {
+float f=3.3;
+System.out.println(f);
+}
+}
+Also rectify this code.
+
+Ans : In this code if we want to  print floot value then we have to do either down casting or 
+we cal use by default property double.
+
+Example :- 
+//First way to print float value...
+public class Main {
+public static void main(String[] args) {
+float f=3.3f; <---//float f=3.3;
+System.out.println(f);
+}
+}
+
+//Another way to print float value...
+public class Main {
+public static void main(String[] args) {
+double f=3.3; <---//float f=3.3;
+System.out.println(f);
+}
+}

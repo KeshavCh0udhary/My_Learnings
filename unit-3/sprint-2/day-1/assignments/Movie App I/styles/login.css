@@ -1,0 +1,84 @@
+#navbar {
+    display: flex;
+    justify-content: right;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background-color: rgb(18, 14, 83);
+    margin: 0%;
+    margin-left: 0%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(39, 41, 45);
+}
+
+#navbar a {
+    margin: 12px;
+    text-decoration: none;
+    color: rgb(12, 6, 130);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+#navbar>a {
+    background-color: blueviolet;
+}
+
+#navbar>a+a {
+    background-color: rgb(226, 162, 43);
+}
+
+#navbar>a+a+a {
+    background-color: rgb(76, 226, 43);
+}
+
+#navbar a:hover {
+    background-color: rgb(235, 255, 253);
+}
+
+#login-form-div {
+    margin: auto;
+    width: 20%;
+    margin-top: 150px;
+    background-color: rgb(52, 55, 60);
+    padding: 12px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+#login-form-div>form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3);
+    gap: 4%;
+}
+
+#login-form-div>form>input {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: white;
+}
+
+#login-form-div>form>input:hover {
+    border: 1px solid greenyellow;
+}
+
+#login-form-div>form button {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: gray;
+}
+
+#login-form-div>form button:hover {
+    border: 1px solid greenyellow;
+}

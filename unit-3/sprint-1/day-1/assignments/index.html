@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #winner {
+      margin: auto;
+      width: 300px;
+      height: 60px;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid rgb(21, 17, 17);
+
+    }
+  </style>
+</head>
+
+<body>
+  <div id="winner"></div>
+  <div id="member-1"></div>
+  <div id="member-2"></div>
+  <div id="member-3"></div>
+  <button onclick="RollTheDice()">ROLL THE DICE</button>
+</body>
+
+</html>
+
+
+<script>
+
+  function RollTheDice() {
+    let member_1 = document.getElementById("member-1");
+    let member_2 = document.getElementById("member-2");
+    let member_3 = document.getElementById("member-3");
+
+    member_1.innerText = Math.floor(Math.random() * 6);
+    member_1.style.backgroundColor = "transparent";
+
+    member_2.innerText = Math.floor(Math.random() * 6);
+    member_2.style.backgroundColor = "transparent";
+
+    member_3.innerText = Math.floor(Math.random() * 6);
+    member_3.style.backgroundColor = "transparent";
+
+
+
+    if (
+      member_1.innerText > member_2.innerText
+    ) {
+      member_1.backgroundColor = "green"
+    }
+
+  }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- <html>
+<head>
+    <title>Dice Simulator 2015</title>
+    <style>
+  button {
+    background-color: rgb(82, 186, 179);
+    border-radius: 6px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    text-transform: uppercase;
+    width: 200px;
+    cursor: pointer;
+  }
+  #placeholder {
+    height: 100px;
+    width: 100px;
+    padding: 50px;
+    margin: 50px auto;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    font-size:80px;
+  }
+    </style>
+</head>  
+<body>
+  <p id="placeholder">
+  
+  </p>
+  <button id="button">Roll Dice</button>
+  <script src="dice.js"></script>
+  <script src="ui.js"></script>
+</body>
+</html>
+
+
+
+ <script>
+     var dice = {
+    sides: 6,
+    roll: function () {
+      var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+      return randomNumber;
+    }
+  }
+  
+  
+  
+  //Prints dice roll to the page
+  
+  function printNumber(number) {
+    var placeholder = document.getElementById('placeholder');
+    placeholder.innerHTML = number;
+  }
+  
+  var button = document.getElementById('button');
+  
+  button.onclick = function() {
+    var result = dice.roll();
+    printNumber(result);
+  };
+ </script> -->

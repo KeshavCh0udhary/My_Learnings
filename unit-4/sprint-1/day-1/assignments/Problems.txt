@@ -1,0 +1,36 @@
+Q1 Write the difference between JRE, JDK, and JVM.
+Ans: 
+i--->  JDK is primarily used for code execution and has prime functionality of development.
+ii-->  On the other hand, JRE is majorly responsible for creating the environment for code execution.
+iii->  JVM on the other hand specifies all the implementations and is responsible for providing these implementations to JRE.
+
+Q2 Write the difference between JSE, JEE, and JME.
+
+Ans:
+JSE: Java SE is software that runs on a computer; it contains the core classes of the Java language, such as database link, interface definition, input, and output, network programming
+
+JEE: Java EE is for website (JSP); enterprise-level, such as: EJB, servlet, JSP, xml, transaction control.
+
+JME:  Java ME is for mobile phone software.
+
+Q3 How does java achieve platform independency?
+Ans: 
+Since every Java program runs on Java virtual machine, the same byte code can be run on any platform. the key is byte code is not machine instruction they are platform-independent instructions to JVM.
+
+Q4 What are features of Java and explain them?
+Ans: 
+Simple--> Java is easy to learn and its syntax is quite simple, clean, and easy to understand.
+
+Object-Oriented--> Java is object-oriented, it supports all the OOPS characteristics. This makes java applications easy to develop and maintain, compared to structured programming language.
+
+Portable and Platform Independent--> Java source code is compiled and converted into bytecode. this bytecode can run on multiple platforms i.e. Write Once and Run Anywhere(WORA), we can compile the java code in one Operating System and execute it on another Operating System. 
+
+Secure--> JAVA has provided an implicit component inside JVM in the form of a “Security Manager”  to provide implicit security against malicious code. Java has provided excellent predefined implementations for almost all well-known network security. JAVA has provided a separate middleware service in JAAS [Java Authentication and Authorization Service], which provides web security. Auth, SSO. 
+
+Robust--> Robust means strong. Java is having a very good memory management system in the form of a heap memory management system, it is a dynamic memory management system, it allocates and deallocates memory for the objects at runtime. JAVA is having very good Exception Handling mechanisms, because, Java has provided a very good predefined library to represent and handle almost all the frequently generated exceptions in java applications. 
+
+Multithreaded--> Java supports multithreading to enhance performance. by using this we can execute multiple functionalities simultaneously.
+
+Q5 ) Write a Java Application that prints your details.
+Ans: Github link: https://github.com/masai-course/Krishna_fw19_0681/tree/master/unit-4/sprint-1/day-1/assignments/src/com/Object
+

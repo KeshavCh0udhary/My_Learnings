@@ -1,0 +1,19 @@
+Q/- What is a Spring Bean and Spring container? How to activate the Spring Container in our
+application.
+
+
+spring bean-->
+What is Spring bean?
+Spring Bean: is an object, which is created, managed and destroyed in Spring Container.
+ We can inject an object into the Spring Container through the metadata(either xml or annotation),
+  which is called inversion of control.
+  
+spring container-->
+The Spring container is at the core of the Spring Framework. The container will create the objects,
+ wire them together, configure them, and manage their complete life cycle from creation till 
+ destruction. The Spring container uses DI to manage the components that make up an application.
+ 
+ we have multiple ways to activate our spring container in our application like by creating xml files
+ in resources folder or we also can activate our spring container using some annotation as well.By 
+ using xml file we define the dependencies using some tags and by defining the some setter method and 
+ constructor inside the java class.

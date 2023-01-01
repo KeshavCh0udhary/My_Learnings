@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="login">
+        <h1>LOGIN</h1>
+        <h2>Username</h2>
+        <input type="text" placeholder="Username" id="username1">
+        <h2>Password</h2>
+        <input type="text" placeholder="password" id="password1">
+        <input type="submit" placeholder="LOGIN">
+    </form>
+</body>
+
+</html>
+<script>
+    let login1 = JSON.parse(localStorage.getItem("adminchoice")) || []
+    console.log(login1)
+    // let login2=JSON.parse(localStorage.getItem("sign"))||[]
+    // console.log(login)
+    document.querySelector("form").addEventListener("submit", on1)
+    function on1(event) {
+        event.preventDefault()
+        let username1 = document.querySelector("#username1").value
+        let password1 = document.querySelector("#password1").value
+        class login {
+            constructor(username, password) {
+                this.username = username;
+                this.password = password;
+            }
+
+            login2(username1, password1) {
+                console.log("yes")
+                console.log(username1, this.username)
+                console.log(password1, this.password)
+                // let take=true;
+                if (username1 === this.username && password1 === this.password) {
+                    alert("Logged in!")
+                    window.location.href = "lecture.html"
+
+                    // take=true;
+                } else if (username1 == "akash101" && password1 == "akash101") {
+                    alert("admin login")
+                    window.location.href = "admin.html"
+                }
+            }
+
+
+
+        }
+        // console.log(login1[0].username)
+        // console.log(login1[0])
+        let s1;
+        for (let i = 0; i < login1.length; i++) {
+            s1 = new login(login1[i].username, login1[i].password)
+            s1.login2(username1, password1)
+        }
+        if (login1.length == 0) {
+            let s2 = new login("ak", "ak")
+            s2.login2(username1, password1)
+        }
+
+
+        // s1.login(username1,password1)
+        // window.location.href="lecture1.html"
+    }
+
+
+</script>

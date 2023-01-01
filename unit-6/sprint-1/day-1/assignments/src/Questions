@@ -1,0 +1,77 @@
+Q1-> Explain Layared Architecture in Business application
+ans-- 
+Presentation tier
+The presentation tier is the user interface and communication layer of the application, where the end user interacts with the application. Its main purpose is to display information to and collect information from the user. This top-level tier can run on a web browser, as desktop application, or a graphical user interface (GUI), for example. Web presentation tiers are usually developed using HTML, CSS and JavaScript. Desktop applications can be written in a variety of languages depending on the platform.
+
+Application tier
+The application tier, also known as the logic tier or middle tier, is the heart of the application. In this tier, information collected in the presentation tier is processed - sometimes against other information in the data tier - using business logic, a specific set of business rules. The application tier can also add, delete or modify data in the data tier.
+
+The application tier is typically developed using Python, Java, Perl, PHP or Ruby, and communicates with the data tier using API calls. 
+
+Data tier
+The data tier, sometimes called database tier, data access tier or back-end, is where the information processed by the application is stored and managed. This can be a relational database management system such as PostgreSQL, MySQL, MariaDB, Oracle, DB2, Informix or Microsoft SQL Server, or in a NoSQL Database server such as Cassandra, CouchDB or MongoDB. 
+
+In a three-tier application, all communication goes through the application tier. The presentation tier and the data tier cannot communicate directly with one another.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2.Limitation of JDBC based persistence logic over JPA?
+ans--
+JDBC->
+JDBC is a programming-level interface for Java applications that communicate with a database. An application uses this API to communicate with a JDBC manager. It's the common API that our application code uses to communicate with the database. Beyond the API is the vendor-supplied, JDBC-compliant driver for the database we're using.
+
+JPA
+JPA is a Java standard that allows us to bind Java objects to records in a relational database. It's one possible approach to Object Relationship Mapping(ORM), allowing the developer to retrieve, store, update, and delete data in a relational database using Java objects. Several implementations are available for the JPA specification.
+
+JPA vs JDBC
+
+When it comes to deciding how to communicate with back-end database systems, software architects face a significant technological challenge. The debate between JPA and JDBC is often the deciding factor, as the two database technologies take very different approaches to work with persistent data. Let’s analyze the key differences between them.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3. Differentiate between Hibernate and JPA?
+ans--
+JPA is described in javax.persistence package.	Hibernate is described in org.hibernate package.
+It describes the handling of relational data in Java applications.                                                                        	
+Hibernate is an Object-Relational Mapping (ORM) tool that is used to save the Java objects in the relational database system.
+
+It is not an implementation. It is only a Java specification.	Hibernate is an implementation of JPA. Hence, the common standard which is given by JPA is followed by Hibernate.
+It is a standard API that permits to perform database operations.
+
+It is used in mapping Java data types with SQL data types and database tables.
+
+As an object-oriented query language, it uses Java Persistence Query Language (JPQL) to execute database operations.
+
+As an object-oriented query language, it uses Hibernate Query Language (HQL) to execute database operations.
+
+To interconnect with the entity manager factory for the persistence unit, it uses EntityManagerFactory interface. Thus, it gives an entity manager.
+
+To create Session instances, it uses SessionFactory interface.
+To make, read, and remove actions for instances of mapped entity classes, it uses EntityManager interface. This interface interconnects with the persistence condition.
+
+To make, read, and remove actions for instances of mapped entity classes, it uses Session interface. It acts as a runtime interface between a Java application and Hibernate.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q4 Explain the properties of JPA   (Java Persistence API) ?
+ans--
+As a specification, the Jakarta Persistence API (formerly Java Persistence API) is concerned with persistence, which loosely means any mechanism by which Java objects outlive the application process that created them. Not all Java objects need to be persisted, but most applications persist key business objects. The JPA specification lets you define which objects should be persisted, and how they are persisted in your Java applications.
+
+By itself, JPA is not a tool or framework; rather, it defines a set of concepts that guide implementers. While JPA's object-relational mapping (ORM) model was originally based on Hibernate, it has since evolved. Likewise, while JPA was originally intended for use with relational databases, some JPA implementations have been extended for use with NoSQL datastores. A popular framework that supports JPA with NoSQL is EclipseLink, the reference implementation for JPA 3.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q5. Why to use ORM and What are the benefits of ORM?
+ans--
+Object-Relational Mapping is a technique that lets you query and manipulates data from a database using an object-oriented paradigm. ORM loves objects as much as developers, and is available for any programming languagee of your choosing.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q6 what is Core Components of Hibernate explain ?
+ans--
+The Key components of Hibernate are: Session: It is used to get a physical network with a database. Transaction: It represents the unit of work with a database. Query: It uses SQL and HQL string to retrieve the data from the database and create objects.
+
+
+
+
+

@@ -1,0 +1,25 @@
+{
+  "name": "krishna_fw19_0681",
+  "version": "1.0.0",
+  "description": "Masai School Coding Assignments",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/masai-course/Krishna_fw19_0681.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/masai-course/Krishna_fw19_0681/issues"
+  },
+  "homepage": "https://github.com/masai-course/Krishna_fw19_0681#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.6",
+    "@babel/preset-env": "^7.18.6",
+    "babel-jest": "^28.1.2",
+    "jest": "^28.1.2"
+  }
+}

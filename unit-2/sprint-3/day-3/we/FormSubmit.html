@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+    <form>
+        <p>Name &nbsp&nbsp&nbsp<input type="text" id="Name" placeholder="Enter Name"></p>
+        <p>Age&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number" id="Age" placeholder="Enter Age"></p>
+        <p>Gender &nbsp<select name="Select" id="Gender">
+                <option>Select</option>
+                <option value="Male">M</option>
+                <option value="Female">F</option>
+            </select></p>
+        <p>Mail &nbsp&nbsp&nbsp&nbsp&nbsp<input type="email" id="Email" placeholder="Enter Email"></p>
+        <p>Mobile&nbsp <input type="number" id="Mobile" placeholder="Enter Mobile"></p>
+        &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <input type="submit"
+            value="Submit">
+    </form>
+</body>
+
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", StoreData);
+    let Data=[];
+    function StoreData(event) {
+        event.preventDefault();
+        let UserDetails = {
+            Name: document.querySelector("#Name").value,
+            Age: document.querySelector("#Age").value,
+            Gender: document.querySelector("#Gender").value,
+            Mail: document.querySelector("#Email").value,
+            Mobile: document.querySelector("#Mobile").value
+        }
+        Data.push(UserDetails);
+    }
+
+    
+    console.log(Data);
+</script>

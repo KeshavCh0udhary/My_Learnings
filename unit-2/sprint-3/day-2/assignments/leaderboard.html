@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Max</title>
+    <style>
+        h2 {
+            text-align: center;
+            font-size: 40px;
+            margin-top: 0px;
+        }
+
+        #Midil {
+            margin-top: -20px;
+            overflow: hidden;
+            width: 21%;
+            height: 80px;
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 25px;
+            font-size: 40px;
+            background-color: grey;
+        }
+
+        #Mid {
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: repeat(3, 80px);
+            grid-template-rows: repeat(3, 80px);
+            gap: 20px;
+            width: 50%;
+            justify-content: center;
+            margin-inline: auto;
+        }
+
+        #Mid>div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border-radius: 15px;
+        }
+
+        #Bottom {
+            width: 80px;
+            height: 80px;
+            margin-inline: auto;
+            margin-top: 25px;
+            display: flex;
+            font-size: 30px;
+            justify-content: center;
+            align-items: center;
+            background-color: violet;
+            border-radius: 15px;
+        }
+
+        #Footer {
+            display: flex;
+            margin: 300px 0px;
+            border: 1px solid black;
+            width: 20%;
+            height: 70px;
+            margin: auto;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            color: white;
+            background-color: black;
+            margin-top: 20px;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .orange {
+            background-color: orange;
+        }
+
+        #Header {
+            width: 32%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            ;
+        }
+
+        #Header>div {
+            width: 140px;
+            height: 100px;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            border-radius: 15px;
+        }
+
+        #NameMinMax {
+            display: flex;
+            margin-bottom: 20px;
+            width: 25%;
+            margin-inline: auto;
+            justify-content: space-between;
+
+
+        }
+
+        #NameMinMax>div {
+            font-size: 25px;
+
+        }
+
+        #Header>div:nth-child(1) {
+            background-color: red;
+
+        }
+
+        #Header>div:nth-child(2) {
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Header">
+        <div id="Min">43</div>
+        <div id="Max">2019</div>
+
+    </div>
+    <div id="NameMinMax">
+        <div>MIN</div>
+        <div>MAX</div>
+    </div>
+
+    <h2>Score</h2>
+    <div id="Midil">
+        <h2>#</h2>
+    </div>
+    <div id="Mid">
+        <div class="green">1</div>
+        <div class="orange">2</div>
+        <div class="green">3</div>
+        <div class="orange">4</div>
+        <div class="orange">5</div>
+        <div class="orange">6</div>
+        <div class="green">7</div>
+        <div class="orange">8</div>
+        <div class="green">9</div>
+    </div>
+    <div id="Bottom">
+        0
+    </div>
+    <div id="Footer">
+        <p>ENTER</p>
+    </div>
+</body>
+
+</html>
+<script>
+    let x = document.querySelectorAll("#Mid>div")
+    let y = document.querySelector("#Bottom").addEventListener("click", Data)
+    let bag = ""
+    for (let i = 0; i < x.length; i++) {
+        x[i].addEventListener("click", Data)
+    }
+    function Data() {
+        bag = bag + event.target.innerText;
+
+        document.querySelector("#Midil>h2").innerText = bag;
+    }
+    document.querySelector("#Footer>p").addEventListener("click", Compare)
+    function Compare() {
+
+
+        let a = Number(document.querySelector("#Min").innerText)
+        let b = Number(document.querySelector("#Max").innerText)
+        if (+(bag) < a) {
+            document.querySelector("#Min").innerText = bag;
+            document.querySelector("#Midil>h2").innerText = "";
+            bag = ""
+        }
+        if (+(bag) > b) {
+            document.querySelector("#Max").innerText = bag;
+            document.querySelector("#Midil>h2").innerText = "";
+            bag = ""
+        }
+        else {
+            document.querySelector("#Midil>h2").innerText = ""
+            bag = ""
+        }
+    }
+</script>

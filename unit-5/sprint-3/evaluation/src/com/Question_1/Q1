@@ -1,0 +1,10 @@
+Q1/- Explain the meaning of the deadlock in multithreaded application, when it can occur in
+multithreading applications.Write one example of deadlock.
+
+
+Answer :--
+
+A lock without key is known as deadlock.
+
+Deadlock occurs when multiple threads need the same locks but obtained them in a different order.
+

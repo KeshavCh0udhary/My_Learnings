@@ -1,0 +1,93 @@
+Can we have a non-abstract method inside an
+interface?
+ans--> That's all about whether you can specify non-abstract methods on an interface in Java or not. Yes, it is not possible in the earlier version of Java e.g. until JDK 7 but from JDK 8 onwards you can specify non-abstract methods in form of default and static methods on the interface.
+
+code snippet-->>
+
+
+public interface MyInter {
+
+	
+default void sleep() {
+	System.out.println("inside sleep method of myinter interface");
+}
+	
+static void code() {
+	System.out.println("inside sleep method of myinter interface");
+}
+void eat();
+	
+}
+========================================================================
+Ques 2: Implement 2 interfaces in a single class having
+same default methods and observe the catch there?
+
+Ans-->> if we have implemented 2 interfaces and both interfaces having same signature of method so they should be exact the same return type and parameter as well otherwise it can occur a compile time error.
+
+===================================================================
+
+Ques 3: Observe the following code and answer
+// Shape.java
+public class Shape {
+protected void display() {
+System.out.println("Display-base");
+}
+}
+// Circle.java
+public class Circle extends Shape { <
+< access - modifier > void display() {
+System.out.println("Display-derived");
+}
+}
+
+Ans--->>>. public and protected both can be used.
+
+===================================================================
+
+Ques 4: Observe and answer.. also try to run and play
+around the code
+abstract class Car {
+static {
+System.out.print("1");
+}
+public Car(String name) {
+super();
+System.out.print("2");
+}
+{
+System.out.print("3");
+}
+}
+public class BlueCar extends Car {
+{
+System.out.print("4");
+}
+public BlueCar() {
+super("blue");
+System.out.print("5");
+}
+public static void main(String[] gears) {
+new BlueCar();
+}
+}
+
+ans-->>> 13245
+
+=========================================================
+
+Ques 5: Observe the following code snippet
+class Math {
+public final double secret = 2;
+}
+class ComplexMath extends Math {
+public final double secret = 4;
+}
+public class InfiniteMath extends ComplexMath {
+public final double secret = 8;
+public static void main(String[] numbers) {
+Math math = new InfiniteMath();
+System.out.print(math.secret);
+}
+}
+
+Ans-->>>2

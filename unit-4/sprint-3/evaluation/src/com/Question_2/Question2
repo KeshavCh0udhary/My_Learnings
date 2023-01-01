@@ -1,0 +1,21 @@
+Q2 Briefly explain the difference between Early and Late Binding with examples.
+
+Early Binding :---
+1. Early binding happens at compile-time.
+2. Method definition and method call is linked during compile-time.
+3. Also known as Static binding.
+4. Execution speed is faster.
+
+Example :---
+
+1. Normal method call.
+2. Overloaded Method.
+
+Late Binding  :---
+1. Late binding happens at run-time.
+2. Flexible because single method can handle different objects at run time.
+3. Also known as Dynamic binding.
+4. Execution speed is lower.
+
+Example:---
+1. Method Overriding;

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>SIGNUP</h1>
+        <h2>Username</h2>
+        <input type="text" placeholder="Username" id="username">
+        <h2>Password</h2>
+        <input type="text" placeholder="password" id="password">
+        <input type="submit" placeholder="SIGNUP">
+    </form>
+    <p>or</p>
+    <h3>If you are the admin just click on the below buttion and login</h3>
+    <button><a href="login.html">LOGIN</a></button>
+
+</body>
+
+</html>
+<script>
+
+
+
+    let students = JSON.parse(localStorage.getItem("sign")) || []
+    document.querySelector("form").addEventListener("submit", on)
+    // let students=JSON.parse(localStorage.getItem("sign"))||[]
+    function on(event) {
+        // students=[]
+        event.preventDefault()
+        class User {
+            constructor(name) {
+                this.name = name
+            }
+            signup(username, password) {
+
+                let isValidated = false
+
+                isValidated = this.#validateUsername(username) && this.#validatePassword(password)
+                if (isValidated) {
+                    this.username = username
+                    this.password = password
+                    alert("user registered sucessful")
+                    students.push(this)
+                    localStorage.setItem("sign", JSON.stringify(students))
+                } else {
+                    alert("please follow rules")
+                }
+
+            }
+            #validateUsername(username) {
+                if (username.length < 6) {
+                    alert("username must be more than 6 characters")
+                } else {
+                    return true
+                }
+            }
+            #validatePassword(password) {
+                if (password.length < 5) {
+                    alert("password must be more than 5 character")
+                } else {
+                    return true
+                }
+            }
+        }
+
+        class student extends User {
+            constructor(name) {
+                super(name)
+
+            }
+        }
+
+        let username = document.querySelector("#username").value
+        let password = document.querySelector("#password").value
+        let s1 = new student(username)
+        s1.signup(username, password)
+        window.location.href = "login.html"
+    }
+
+
+</script>

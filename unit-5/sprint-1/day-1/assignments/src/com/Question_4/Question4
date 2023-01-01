@@ -1,0 +1,36 @@
+Explain Generics in Java and Its Importance with example.
+
+Ans :- 
+
+The Java Generics allows us to create a single class, interface, and method that can be used with different types of data (objects).
+This helps us to reuse our code.
+
+Note: Generics does not work with primitive types (int, float, char, etc).
+
+class Main {
+  public static void main(String[] args) {
+
+    GenericsClass<Integer> intObj = new GenericsClass<>(5);
+    System.out.println("Generic Class returns: " + intObj.getData());
+
+    GenericsClass<String> stringObj = new GenericsClass<>("Java Programming");
+    System.out.println("Generic Class returns: " + stringObj.getData());
+    
+  }
+}
+
+class GenericsClass<T> {
+
+  private T data;
+
+  public GenericsClass(T data) {
+    this.data = data;
+  }
+
+  public T getData() {
+    return this.data;
+  }
+}
+
+Generic Class returns: 5
+Generic Class returns: Java Programming

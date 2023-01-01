@@ -1,0 +1,14 @@
+: Explain difference between PriorityQueue() and LinkedList();
+
+Ans ;-
+
+PriorityQueue()----
+
+PriorityQueue is an unbounded priority queue based on a priority heap. The elements of the priority queue are ordered according to their natural ordering,
+or by a Comparator provided at queue construction time, depending on which constructor is used. A priority queue does not permit null elements. 
+
+
+LinkedList()---
+
+java.util.LinkedList is a doubly-linked list implementation of the List and Dequeue interfaces. Implements all optional list operations, 
+and permits all elements (including null).

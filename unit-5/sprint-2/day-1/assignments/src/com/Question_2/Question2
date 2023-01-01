@@ -1,0 +1,32 @@
+Q2) Explain the difference between Checked and Unchecked exceptions. write some
+examples of checked and unchecked exception classes.
+
+==============================================================================
+Ans-->
+  
+  exception is an unwanted or unexpected event, which occurs during the execution of the program, i.e. at run time, that disrupts 
+    the normal flow of the program's instructions.In java, there are two types of exception:
+ 1. checked exception
+ 2.unchecked exception
+  
+
+ checked exception -->
+    
+  These are the exceptions that are checked at compile time. If some code within a method throws a checked exception, then the
+  method must either handle the exception or it must specify the exception using the throws keyword. In checked exception, there are
+  two types: fully checked and partially checked exceptions. A fully checked exception is a checked exception where all its child 
+ classes are also checked, like IOException, InterruptedException. A partially checked exception is a checked exception where some of
+ its child classes are unchecked, like Exception.
+   
+Example--> IOException, InterruptedException,ClassNotFoundException
+
+
+
+ Unchecked Exception --->
+
+  These are the exceptions that are not checked at compile time. In C++, all exceptions are unchecked, so it is not forced by the
+ compiler to either handle or specify the exception. It is up to the programmers to be civilized, and specify or catch the exceptions.
+ In Java, exceptions under Error and RuntimeException classes are unchecked exceptions, everything else under throwable is checked. 
+
+Example-->NullpointerException,ArrayOutOfBoundexception,NumberFormatexceptiom.
+

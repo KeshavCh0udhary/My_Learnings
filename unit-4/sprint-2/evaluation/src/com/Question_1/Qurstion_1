@@ -1,0 +1,114 @@
+Q1) a) Why String is immutable in java and what is the difference between String and String Builder?
+ And Write some of the methods of String class at least 5 with example.
+ 
+ Answer :- In Java the strings are immutable it means that we can't change the Object itself, but we
+ can change the reference of the object.
+ 
+ Example --> String Str = "Krishna Keshav";
+ 
+ Str.concat("Choudhary");
+ 
+ System.out.print(Str);
+ 
+ It will give us Krishna Keshav ;
+ 
+ But If we write String Str1=Str;
+ 
+ And we are trying to print  System.out.println(Str1);
+  then it will give Krishna Keshav
+  
+  Here--> (String Str1=Str)--> In Str1 the address of the Str is stored and when we are trying to print 
+  the value of Str1 it refers to the address of the Str and it prints the value (Krishna Keshav);
+  
+  
+  
+  Difference between String and String Builder------
+  
+   String :- 
+   
+  1. It performs Slow as compared to StringBuilder during frequent updates and concataning.
+  2. The String created using String class is immutable.
+  3. It requires more memory to create a new instance if operations performed on a string change its value.
+  4. An object of string is read-only in nature.
+  
+   StringBuilder :- 
+   
+  1. StringBuilder is fast as compare to String.
+  2. The String created using String class is mutable.
+  3. It requires less memory as it updates the existing instance.
+  4. An object of StringBuilder is dynamic in nature.
+  
+  
+  
+  Methods of String class---------
+  
+  1. Char charAt(int i);
+  
+  Example :-  String Str="Krishna Keshav";
+  System.out.println(Str.charAt(0)); -->It will give the charecter at 0 position.
+  
+  2. int length();
+  
+  Example :- String Str="Krishna Keshav";
+  System.out.println(Str.length()); --> It will give the length of the string.
+  
+  3. String concat(String args);
+  Example :- String Str="Krishna Keshav";
+  String newStr2=Str.concat(" Choudhary");
+  System.out.println(newStr2); -->It will give the new concated string Krishna Keshav Choudhary;
+  
+  4. boolean equals(Object args);
+  Example :- String Str="Krishna Keshav";
+  System.out.println(Str.equals("K"));--> It will give false;
+  5. String substring(int i);
+  Example :- String Str="Krishna Keshav";
+  System.out.println(Str.substring(0)); --->It will give Krishna;
+  
+  
+  
+b) What is the difference between equals method and == operator in java? And what will be the output of the
+following code snippets and giving proper explanation.
+
+Answer :- 
+
+equals() Method should be used for content comparision;
+equals() Method evaluates the content to check the equality;
+equals() is a method of Object class.
+equals() It can be overide if the present. 
+
+== should be used during refernce comparision.
+== checks if both reference points to same location or not.
+== is an operator.
+== can't be overriden.
+
+
+
+String s1 = new String("abc");
+String s2 = new String("abc");
+System.out.println(s1.equals(s2));
+ 
+ Output :- true;
+ Explanation :- Here equals method compares whole arguments means we are comparing whole value of s1 and s2.
+ 
+ 
+StringBuilder sb1 = new StringBuilder("abc");
+StringBuilder sb2 = new StringBuilder("abc");
+System.out.println(sb1.equals(sb2));
+
+Output :- false;
+Explanation :- Here both sb1 and sb2 are created with new StringBuilder so it can't compare the object.
+   
+String s1 = new String("abc");
+String s2 = new String("abc");
+System.out.println(s1==s2);
+
+false; 
+
+Explanation :- Here both s1 and s2 are created using new keyword so the address of both string is different and 
+== compares the address so it will give false.
+  
+  
+  
+  
+  
+  

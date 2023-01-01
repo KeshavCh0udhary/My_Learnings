@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        button {
+
+            border: 1px solid transparent;
+            padding: 15px 20px;
+            font-size: 20px;
+            margin: 5px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let Data = [
+        { Name: 'Primary', BackgroundColor: 'Blue', Color: 'white' },
+        { Name: 'Secondary', BackgroundColor: 'grey', Color: 'white' },
+        { Name: 'Success', BackgroundColor: 'lightgreen', Color: 'white' },
+        { Name: 'Danger', BackgroundColor: 'red', Color: 'white' },
+        { Name: 'Warning', BackgroundColor: 'yellow', Color: 'black' },
+        { Name: 'Info', BackgroundColor: 'teal', Color: 'white' },
+        { Name: 'Light', BackgroundColor: 'lightgrey', Color: 'black' },
+        { Name: 'Dark', BackgroundColor: 'black', Color: 'white' },
+        { Name: 'Link', BackgroundColor: 'transparent', Color: 'blue' }
+    ]
+
+    Data.forEach(function (element) {
+        let buton = document.createElement("button");
+        buton.innerText = element.Name;
+        buton.style.background = element.BackgroundColor;
+        buton.style.color = element.Color;
+        document.querySelector("body").append(buton);
+    })
+</script>

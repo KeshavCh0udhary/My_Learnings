@@ -1,0 +1,24 @@
+Q1) Explain the difference between ArrayList and LinkedList.
+
+Answer :- 
+
+ArrayList :---
+
+1. ArrayList internally uses a dynamic array to store its elements.
+
+2. ArrayList is slow as array manipulation is slower.
+
+3. ArrayList implements only List.
+
+4. ArrayList is faster in storing and accessing data.
+
+
+LinkedList :---
+
+1. LinkedList uses Doubly Linked List to store its elements.
+
+2. LinkedList is faster being node based as not much bit shifting required.
+
+3. LinkedList implements List as well as Queue. It can acts as a queue as well.
+
+4. LinkedList is faster in manipulation of data.

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/0/09/YouTube_full-color_icon_%282017%29.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="play.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onload="playVideo()">
+    <nav id="navbar">
+        <img src="https://www.logo.wine/a/logo/YouTube/YouTube-White-Full-Color-Dark-Background-Logo.wine.svg"
+            alt="logo" onclick="GoBack()">
+        <div id="SearchBar">
+            <input type="text" placeholder="Search" id="query">
+            <button onClick="search()" id="click">Search</button>
+        </div>
+    </nav>
+    <iframe width="560" height="315" title="YouTube video player" id="play_video" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+    </iframe>
+</body>
+
+</html>
+
+<script src="play.js"></script>

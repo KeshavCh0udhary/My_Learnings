@@ -1,0 +1,80 @@
+/* Fill CSS here */
+*{
+    box-sizing: border-box;
+}
+h1 {
+    text-align: center;
+    color: #0889fa;
+    text-decoration: underline;
+    text-transform: uppercase;
+}
+
+
+
+div {
+    display: flex;
+    justify-content: space-around;
+}
+
+form {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 25%;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+label {
+    font-size: 22px;
+}
+
+table {
+    width: 70%;
+    margin: auto;
+    margin-top: 35px;
+    text-align: center;
+}
+
+table td.table th {
+    border-top: 1px solid rgb(249, 11, 11);
+    text-align: center;
+
+}
+
+input[type="submit"] {
+    background-color: #0889fa;
+    width: 100%;
+    font-size: 22px;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    margin-top: 15px;
+
+}
+
+table th {
+    background-color: #0889fa;
+    padding: 10px;
+    color: white;
+}
+
+label {
+    font-size: 22px;
+}
+
+input[type="text"].input[type="number"].select.textarea {
+    width: 100%;
+    padding:15px;
+    border: 1px solid black;
+    border-radius:4px;
+    box-sizing: border-box;
+    margin-top:6px;
+    margin-bottom:20px;
+    resize: vertical;
+}
+
+td{
+    background-color: #b2d1ed;
+}

@@ -1,0 +1,28 @@
+Q3) Explain the difference between comparable and comparator.
+
+Answer :- 
+
+comparable :---
+
+1. Comparable interface is used to sort the objects with natural ordering.
+
+2. Comparable interface compares "this" reference with the object specified.
+
+3. Comparable is present in java.lang package.
+
+4. Comparable affects the original class, i.e., the actual class is modified.
+
+5. Comparable provides compareTo() method to sort elements.
+
+
+comparator :---
+
+1. Comparator in Java is used to sort attributes of different objects.
+
+2. Comparator in Java compares two different class objects provided.
+
+3. A Comparator is present in the java.util package.
+
+4. Comparator doesn’t affect the original class.
+
+5. Comparator provides compare() method, equals() method to sort elements.

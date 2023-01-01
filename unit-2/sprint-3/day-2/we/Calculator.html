@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        h1 {
+            color: turquoise;
+            font-size: 55px;
+            text-align: center;
+        }
+
+        #Calculator {
+            margin: auto;
+            border: 2px solid transparent;
+            width: 530px;
+            height: 650px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        }
+
+        #Calculator>div {
+            width: 75%;
+            margin: auto;
+        }
+
+        #Calculator>div:first-child {
+            margin-top: 50px;
+            height: 90px;
+            border-radius: 10px;
+            background-color: lightpink;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow:hidden;
+        }
+
+        #Calculator>div:last-child {
+            margin-top: 25px;
+            height: 450px;
+            display: grid;
+            grid-template-columns: repeat(4, 4fr);
+            grid-template-rows: repeat(4, 90px);
+            gap: 23px;
+
+
+
+
+        }
+
+        #Calculator>div:last-child>div {
+            border-radius: 10%;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size: 30px;
+            font-weight: bold;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        #Calculator>div:last-child>div:nth-child(13){
+            color: white;
+            background-color: red;
+        }
+        #Calculator>div:last-child>div:nth-child(4){
+            color: white;
+            background-color: black;
+        }
+        #Calculator>div:last-child>div:nth-child(8){
+            color: white;
+            background-color: black;
+        }
+        #Calculator>div:last-child>div:nth-child(12){
+            color: white;
+            background-color: black;
+        }
+        #Calculator>div:last-child>div:nth-child(15){
+            color: white;
+            background-color: black;
+        }
+        #Calculator>div:last-child>div:nth-child(16){
+            color: white;
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Masai Calculator</h1>
+    <div id="Calculator">
+        <div></div>
+        <div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>+</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>-</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>*</div>
+            <div>C</div>
+            <div>0</div>
+            <div>=</div>
+            <div>/</div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+<script>
+let keys =document.querySelectorAll("#Calculator>div:last-child>div");
+let bag="";
+for(let i=0; i<keys.length; i++){
+    keys[i].addEventListener("click",MyCalculator);
+}
+function MyCalculator(event) {
+    let targetNumber = event.target.innerText;
+    if(targetNumber==="C"){
+        bag="";
+        document.querySelector("#Calculator>div:first-child").innerText = "";
+    }
+    else if(targetNumber==="="){
+        document.querySelector("#Calculator>div:first-child").innerText = eval(bag);
+    }
+    else{
+    bag = bag + targetNumber;
+    console.log(bag);
+    document.querySelector("#Calculator>div:first-child").innerText = bag;
+    }
+    if(bag==="" && targetNumber==="=" ){
+        document.querySelector("#Calculator>div:first-child").innerText = "";
+    }
+    else if((bag[0]==="/"&&bag[1]==="/")&& targetNumber==="="){
+        document.querySelector("#Calculator>div:first-child").innerText = "";
+    }
+}
+
+</script>

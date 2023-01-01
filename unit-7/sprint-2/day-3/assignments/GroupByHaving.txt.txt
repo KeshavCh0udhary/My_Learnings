@@ -1,0 +1,7 @@
+1--> select sector,Avg(eps) AS AvgEPSPerSector from Stock GROUP by sector HAVING Avg(eps)>10 order by Avg(eps) desc;
+
+2--> SELECT job_id, AVG(salary) AS avg_salary FROM employee GROUP BY job_id HAVING AVG(salary)>10000 ORDER BY avg_salary DESC;
+
+3--> SELECT job_id, AVG(salary) AS avg_salary FROM employee GROUP BY job_id HAVING AVG(salary)>=10000 and AVG(salary)<=20000 ORDER BY avg_salary DESC;
+
+4--> SELECT product_id,COUNT(*) AS number_of_orders from sale GROUP BY product_id HAVING COUNT(*)>1 ORDER BY COUNT(*) desc;

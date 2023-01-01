@@ -1,0 +1,48 @@
+Question 2:
+● Explain difference between JPA and Hibernate.
+
+Ans : - 
+
+JPA 
+
+1. Java Presistance API defines the management of rational data in the applications.
+
+2. It is just specificationVarious ORM tools implement it for data persistance.
+
+3. It Uses JPQL as an object-oriented query language to perform database operations.
+
+
+Hibernate 
+
+1. Hibernate is an object-Relational Mapping tool which is used to save the state of Java object into the database.
+
+2. It is one of the most frequently used JPA implementation.
+
+3. It uses HQL as an object-oriented query language to perform database operations.
+
+
+
+● Explain the Life-cycle of Entity class with example.
+
+Ans : -
+-> The life cycle of entity objects consists of four states: New, Managed, Removed and Detached.
+
+New :- 
+When an entity object is initially created its state is New.  In this state the object is not yet associated with an EntityManager and has no representation in the database.
+
+Managed :- 
+An entity object becomes Managed when it is persisted to the database via an EntityManager’s persist method, which must be invoked within an active transaction. 
+On transaction commit, the owning EntityManager stores the new entity object to the database. More details on storing objects are provided in the Storing Entities section.
+Entity objects retrieved from the database by an EntityManager are also in the Managed state. Object retrieval is discussed in more detail in the Retrieving Entities section.
+
+If a managed entity object is modified within an active transaction the change is detected by the owning EntityManager and the update is propagated to the database on transaction commit.  
+See the Updating Entities section for more information about making changes to entities.
+
+Removed :- 
+A managed entity object can also be retrieved from the database and marked for deletion, using the EntityManager’s remove method within an active transaction. 
+The entity object changes its state from Managed to Removed, and is physically deleted from the database during commit. More details on object deletion are provided in the Deleting Entities section.
+
+Detached :- 
+The last state, Detached, represents entity objects that have been disconnected from the EntityManager. For instance, all the managed objects of an EntityManager become detached when the EntityManager is closed. 
+Working with detached objects, including merging them back to an EntityManager, is discussed in the Detached Entities section.
+

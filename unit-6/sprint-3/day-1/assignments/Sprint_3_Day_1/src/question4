@@ -1,0 +1,29 @@
+Q4/- Write Short notes on how the Spring framework evolves.
+
+Prior to the advent of Enterprise Java Beans (EJB), Java developers needed to use JavaBeans to 
+create Web applications. Although JavaBeans helped in the development of user interface (UI)
+ components, they were not able to provide services, such as transaction management and security, 
+ which were required for developing robust and secure enterprise applications. The advent of EJB 
+ was seen as a solution to this problem EJB extends the Java components, such as Web and enterprise
+  components, and provides services that help in enterprise application development. However, 
+  developing an enterprise application with EJB was not easy, as the developer needed to perform 
+  various tasks, such as creating Home and Remote interfaces and implementing lifecycle callback 
+  methods which lead to the complexity of providing code for EJBs Due to this complication, 
+  developers started looking for an easier way to develop enterprise applications.
+
+The Spring framework(which is commonly known as Spring) has emerged as a solution to all these 
+complications This framework uses various new techniques such as Aspect-Oriented Programming (AOP),
+ Plain Old Java Object (POJO), and dependency injection (DI), to develop enterprise applications, 
+ thereby removing the complexities involved while developing enterprise applications using EJB, 
+ Spring is an open source lightweight framework that allows Java EE 7 developers to build simple,
+  reliable, and scalable enterprise applications. This framework mainly focuses on providing various
+   ways to help you manage your business objects. It made the development of Web applications much 
+   easier as compared to classic Java frameworks and Application Programming Interfaces (APIs), 
+   such as Java database connectivity(JDBC), JavaServer Pages(JSP), and Java Servlet.
+
+The Spring framework can be considered as a collection of sub-frameworks, also called layers,
+ such as Spring AOP. Spring Object-Relational Mapping (Spring ORM). Spring Web Flow, and Spring
+  Web MVC. It is a lightweight application framework used for developing enterprise applications.
+   You can use any of these modules separately while constructing a Web application. The modules 
+   may also be grouped together to provide better functionalities in a Web application. Spring
+    framework is loosely coupled because of dependency Injection.

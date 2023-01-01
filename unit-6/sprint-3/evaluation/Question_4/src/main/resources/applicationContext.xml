@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<bean id = "tr" class = "com.Question_4.Triangle">
+<property name="side" value="15"/>
+</bean>
+<bean id = "cr" class = "com.Question_4.Circle">
+<property name="radius" value="10"/>
+</bean>
+
+<bean id = "cy" class = "com.Question_4.Cylinder">
+<property name="radius" value="10"/>
+<property name="side" value ="20"/>
+</bean>
+
+
+</beans>

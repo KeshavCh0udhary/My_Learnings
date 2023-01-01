@@ -1,0 +1,61 @@
+How many types of relationships exist among tables in the Database? 
+Explain with some examples, and also mention how to establish these relationships among 
+tables with examples.
+
+Answer :-
+
+There are three types of relationships exist among tables in the Database.
+
+1. One To One.
+2. One To Many.
+3. Many To Many.
+
+One To One :- It is used to create a relationships between two tables in which a single row of the first
+table can only be related to only one records of a second table. similarly, the row of a second table 
+can also be related to only one row to first table.
+
+Example :- 
+
+create a table Person
+(
+personId int primary key,
+personName varchar(15),
+address varchar(15),
+mobile varchar(10),
+email varchar(20)
+);
+
+create table Aadhar 
+(
+AadharNo int unique, 
+foreign key (AadharNo) references Person(personId)
+);
+
+One To Many :- It is used to create a relationships between two tables. Any single row of the first 
+table can be related to one or more rows of the second tables, but the rows of second tables can only 
+related to the only row in the first table .
+
+Example :- 
+           
+     Table Person                            Table Games
+------------------------            -----------------------------
+     Person1                                 Cricket
+                                    -----------------------------
+                                             Football
+                                    -----------------------------
+                                             VollyBall
+                                    -----------------------------
+                     
+*******************************************************************
+
+Here Person1 can play or interested in more than one game.
+
+
+Many To Many :- 
+
+It can create a relationship between two tables. Each records in the second table. Similarly, each record 
+of the second table can also related to ore than one record of the first table.
+
+Example :- 
+In construct week many people involved in each project, and every person can involve in there own project
+as well.

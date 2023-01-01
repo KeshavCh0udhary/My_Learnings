@@ -1,0 +1,2 @@
+Q1/- Explain the Java-based Spring MVC architecture.
+ans--Spring MVC framework enables separation of modules namely Model, View and Controller and seamlessly handles the application integration. This enables the developer to create complex applications also using plain java classes. The model object can be passed between view and controller using maps

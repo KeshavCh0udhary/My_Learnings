@@ -1,0 +1,48 @@
+body {
+    background-color: black;
+}
+
+#query {
+    width: 50%;
+    padding: 8px;
+    border-radius: 10px;
+    margin-left: 50px;
+    background-color: rgb(60, 56, 56);
+    color: gold;
+}
+
+#click {
+    padding: 8px;
+    border-radius: 10px;
+    margin: auto;
+    background-color: grey;
+    color: gold;
+    margin-left: 50px;
+}
+
+#Container {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.Card img {
+    width: 100%;
+    height: 60%;
+    border-radius: 10px;
+}
+
+.Card {
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(44, 43, 43);
+}
+
+.Card h3 {
+    font-size: small;
+    color: rgb(141, 121, 132);
+}
+

@@ -1,0 +1,56 @@
+create table Department(
+    did int primary key,
+    dname varchar(12) not null,
+    location varchar(12) not null
+    );
+
+desc department;
+
+create table employee (
+      empid int primary key,
+      ename varchar(12) not null,
+      address varchar(12) not null,
+      mobile varchar(12) not null,
+      salary int not null,
+      deptid int,
+      foreign key(deptid) references department(did) 
+      );
+
+desc employee;
+
+
+ insert into department values(1,'Account','Ranchi');
+
+ insert into department values(2,'Sales','Mumbai');
+
+ insert into department values(3,'Marketing','Pune');
+
+ insert into department values(4,'HR','Chennai');
+
+ insert into employee values(1,'Satyam','Ranchi','9304264670',150000,1);
+
+ insert into employee values(2,'Raj','Mumbai','9305264670',160000,1);
+
+ insert into employee values(3,'Rohit','Pune','9305364670',180000,2);
+
+ insert into employee values(4,'Gaurav','Patna','9305284670',140000,2);
+
+ insert into employee values(5,'Ranjan','Delhi','9305274670',130000,2);
+
+ insert into employee values(6,'Rahul','Darbhanga','8709301503',170000,3);
+
+ insert into employee values(7,'Amrit','Gujrat','9305274674',120000,3);
+  
+ insert into employee values(8,'Anand','Madhubani','9470672709',100000,4);
+
+ insert into employee values(9,'Saroj','Rajnagar','9470672809',125000,4);
+ 
+ select deptid, sum(salary) total_salary from employee group by deptid;
+
+ select e.* from employee e inner join department d on e.deptid=d.did where dname = 'Sales';
+
+ select e.empid, d.* from employee e inner join department d on e.deptid=d.did;
+
+ select * from employee where salary = (select max(salary) from employee where salary < (select max(salary) from employee));
+
+ 

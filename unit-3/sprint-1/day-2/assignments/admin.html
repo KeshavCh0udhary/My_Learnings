@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 300px;
+            display: grid;
+            grid-template-columns: repeat(1, 3fr);
+            grid-template-rows: repeat(7, 32px);
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input type="text" name="Product Name" placeholder="Product Name" id="name">
+        <input type="text" name="Categories" placeholder="Categories" id="category">
+        <input type="image url" placeholder="Image Url" id="image">
+        <input type="number" placeholder="Price" id="price">
+        <select name="Gender" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <select name="Sold" id="sold">
+            <option value="sold">Sold</option>
+            <option value="unsold">Unsold</option>
+        </select>
+        <input type="submit" value="Submit" id="add">
+    </form>
+</body>
+
+</html>
+
+
+<script>
+    let ProductDetails = JSON.parse(localStorage.getItem("Products")) || [];
+
+    document.querySelector("form").addEventListener("submit", Submit)
+    function Submit(event) {
+        event.preventDefault();
+        let ProductName = document.getElementById("name").value;
+        let Categories = document.getElementById("category").value;
+        let Image = document.getElementById("image").value;
+        let Price = document.getElementById("price").value;
+        let Gender = document.getElementById("gender").value;
+        let Sold = document.getElementById("sold").value;
+        if (Sold === "sold") {
+            Sold = true;
+        } else {
+            Sold = false;
+        };
+
+
+        let ProductDetail = new UserSProductDetail(ProductName, Categories, Image, Price, Gender, Sold);
+        ProductDetails.push(ProductDetail);
+        // console.log(ProductDetail);
+        localStorage.setItem("Products", JSON.stringify(ProductDetails));
+    };
+   // console.log(ProductDetails);
+
+    function UserSProductDetail(ProductName, Categories, Image, Price, Gender, Sold) {
+        this.ProductName = ProductName;
+        this.Categories = Categories;
+        this.Image = Image;
+        this.Price = Price;
+        this.Gender = Gender;
+        this.Sold = Sold;
+    }
+
+</script>

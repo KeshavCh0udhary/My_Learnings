@@ -1,0 +1,161 @@
+#navbar {
+    display: flex;
+    justify-content: right;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background-color: rgb(18, 14, 83);
+    margin: 0%;
+    margin-left: 0%;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(16, 17, 19);
+}
+
+#navbar a {
+    margin: 12px;
+    text-decoration: none;
+    color: rgb(12, 6, 130);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+
+#navbar>a {
+    background-color: blueviolet;
+}
+
+#navbar>a+a {
+    background-color: rgb(226, 162, 43);
+}
+
+#navbar>a+a+a {
+    background-color: rgb(76, 226, 43);
+}
+
+#navbar a:hover {
+    background-color: rgb(235, 255, 253);
+}
+
+
+
+#Input {
+    width: 20%;
+    /* margin-top: 0%; */
+    background-color: rgb(52, 55, 60);
+    padding: 12px;
+    height: 180px;
+    border-radius: 10px;
+}
+
+#Input {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5);
+    gap: 2%;
+}
+
+#Input>input {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: white;
+}
+
+#Input>input:hover {
+    border: 1px solid greenyellow;
+}
+
+#Input>input:last-child {
+    color: gray;
+}
+
+#Input button {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: gray;
+}
+
+#Input button:hover {
+    border: 1px solid greenyellow;
+}
+
+#slideshow {
+    width: 25%;
+    height: auto;
+   
+}
+
+#slideshow img {
+    width: 80%;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+}
+#slideshow img:hover{
+    border: 2px solid gold;
+}
+
+#InputByUser {
+    margin: auto;
+    margin-top: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 350px;
+}
+
+#movies {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+    /* border: 1px solid red; */
+}
+
+/* #movies>div{
+    height: 100px;
+} */
+
+#movies>div {
+    border-radius: 20px;
+    /* height: fit-content; */
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgb(39, 41, 45);
+}
+
+#movies>div:hover {
+    border: 2px solid gold;
+    /* background-color: rgb(45, 45, 45); */
+}
+
+#movies>div img {
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#movies>div p {
+    margin-left: 10px;
+    color: gray;
+   line-height: 10px;
+}
+
+#movies>div h4 {
+    color: gold;
+    margin-left: 10px;
+}

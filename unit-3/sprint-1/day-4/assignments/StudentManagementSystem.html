@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #students_data {
+            width: 30%;
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 8px;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-evenly;
+            color: white;
+            background-color: rgb(191, 1, 67);
+            position: sticky;
+            top: 0px;
+            z-index: 20;
+        }
+
+        #students_data input {
+            padding: 8px;
+        }
+
+        button {
+            width: 100px;
+            padding: 8px;
+            margin-top: 10px;
+            background-color: pink;
+            border: 1px solid transparent;
+            border-radius: 10px;
+        }
+
+        button>a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="navbar">
+    </div>
+    <button>
+        <a href="Dashboard.html">Dashboard</a>
+    </button>
+    <h1>Add Students Data</h1>
+    <form id="students_data" onsubmit="storeData()">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="course" placeholder="Course">
+        <input type="number" id="unit" placeholder="Enter unit" />
+        <input type="text" id="image" placeholder="Image">
+        <input type="number" id="batch" placeholder="Ft-Web Batch No.">
+        <input type="submit">
+    </form>
+</body>
+
+</html>
+
+<script>
+    function consStudent(n, c, u, i, b) {
+        this.name = n;
+        this.course = c;
+        this.unit = u;
+        this.image = i;
+        this.batch = `ft-web ${b}`;
+    }
+
+    document.querySelector("form").addEventListener("submit", storeData);
+
+
+    function storeData(event) {
+
+        document.querySelector("#navbar").innerHTML = "";
+        event.preventDefault();
+        let form = document.getElementById("students_data");
+        let name = form.name.value;
+        let course = form.course.value;
+        let unit = form.unit.value;
+        let image = form.image.value;
+        let batch = form.batch.value;
+
+        let obj = new consStudent(name, course, unit, image, batch);
+
+        let data = JSON.parse(localStorage.getItem("students")) || [];
+
+        if (name == "" || course == "" || unit == "" || image == "" || batch == "") {
+            alert("Fill All Details.")
+        }
+        else {
+            data.push(obj);
+            localStorage.setItem("students", JSON.stringify(data));
+        }
+
+        calculate();
+
+    }
+    calculate();
+
+    function calculate() {
+        let data = JSON.parse(localStorage.getItem("students")) || [];
+
+        let obj1 = {};
+
+        data.forEach(function (el) {
+
+            if (!obj1[el.batch]) {
+                obj1[el.batch] = 1;
+            }
+            else {
+                obj1[el.batch]++;
+            }
+        })
+
+        for (let key in obj1) {
+            let count = document.createElement("p");
+            count.innerText = key + " " + obj1[key];
+            document.getElementById("navbar").append(count);
+        }
+
+    }
+</script>

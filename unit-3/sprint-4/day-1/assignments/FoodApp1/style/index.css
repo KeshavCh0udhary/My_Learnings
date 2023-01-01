@@ -1,0 +1,206 @@
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: black;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* #query{
+   margin-left: 25%;
+    padding: 8px;
+    width: 400px;
+} */
+
+#query {
+    background-color: rgba(32, 38, 38, 0.553);
+    border: 1px solid transparent;
+    position: sticky;
+    top: 70px;
+    z-index: 20;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+#query[type=search] {
+    /* width: 50%; */
+    width: 400px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    margin-left: 38%;
+}
+
+#query[type=search]:focus {
+    border: 2px solid rgb(42, 185, 189);
+}
+
+#query::placeholder {
+    color: rgb(137, 137, 120);
+    font-size: medium;
+}
+
+#button {
+    border: 1px solid transparent;
+    padding: 12px 20px;
+    margin: 8px 0;
+    position: sticky;
+    top: 70px;
+    z-index: 20;
+    border-radius: 10px;
+    color: rgb(246, 209, 161);
+    background-color: rgba(32, 38, 38, 0.553);
+}
+
+#button:hover {
+    cursor: pointer;
+    border: 2px solid rgb(42, 185, 189);
+}
+
+/* #navbar {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+    background-color: rgb(104, 203, 210);
+} */
+
+#navbar a {
+    text-decoration: none;
+    color: rgb(246, 209, 161);
+}
+
+#navbar a:hover {
+    cursor: pointer;
+    color: deepskyblue;
+    padding: 8px;
+}
+
+#navbar {
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(7, 97, 102, 0.953) 0px 22px 70px 4px;
+    background-color: rgba(0, 0, 0, 0.553);
+    backdrop-filter: blur(1px);
+
+}
+
+#container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+#container>div img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    /* height: 70%; */
+}
+
+#container>div {
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: rgba(159, 173, 174, 0.646) 0px 3px 8px;
+}
+
+#container>div:hover {
+    box-shadow: rgba(51, 51, 236, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#container>div h3 {
+    margin-left: 10px;
+    color: indianred;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container>div h4 {
+    margin-left: 10px;
+    color: rgb(34, 181, 139);
+}
+
+#container>div h4+h4 {
+    margin-left: 10px;
+    color: rgb(109, 180, 59);
+}
+
+#Info {
+    display: flex;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: auto;
+    margin-top: 10px;
+    height: fit-content;
+    color: rgb(241, 210, 169);
+    /* color:chocolate; */
+}
+
+#Container {
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+#Container>div img {
+    width: 100%;
+    border-top-left-radius: 10px;
+    /* height: 70%; */
+}
+
+#Container>div {
+    width: 100%;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    box-shadow: rgba(159, 173, 174, 0.646) 0px 3px 8px;
+}
+
+#Container>div:hover {
+    box-shadow: rgba(51, 51, 236, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    cursor: pointer;
+}
+
+#Container>div h3 {
+    margin-left: 10px;
+    color: indianred;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#Container>div h4 {
+    margin-left: 10px;
+    color: rgb(34, 181, 139);
+}
+
+#Container>div h4+h4 {
+    margin-left: 10px;
+    color: rgb(109, 180, 59);
+}
+
+#Container>div+div>p {
+    margin-left: 10px;
+    color: indianred;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+}
+
+#Container>div+div>h2 {
+    margin-left: 10px;
+    color: rgb(190, 20, 91);
+}

@@ -1,0 +1,22 @@
+Q1)  Is there any difference between creating a string with and without a new operator?  
+     Explain with an example.
+
+Ans :- String Str1 = new String("MyString");
+
+     1. Always create a new object on the heap.
+
+     2. Here creates a new String having for value the value of the constant "MyString" and assigns its
+        reference to the variable Str1.
+       
+     3. Here 2 object is created.  
+     
+       
+       
+       
+       String Str2 = "MyString";
+       
+     1. Here assigns the reference associated to the constant "MyString" to the variable Str2.
+     
+     2. Here one object is created.
+     
+     3. This uses the String pool

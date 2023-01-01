@@ -1,0 +1,22 @@
+Q4/- What is auto wiring in Spring, how many types of Auto wiring are there in spring,
+explain with an example.
+
+
+The process of creating association between/among application components is known as "wiring".(variable is
+wired with appropriate object)
+We have 2 kind of wiring in spring application:
+1. Explicit wiring
+2. Auto-wiring (implicit wiring)
+If a spring developer specifies the associations for the dependency bean by <property> tag or <constructorarg> tag, it is known as explicit wiring.
+Whereas if spring container on its own detects the dependencies implicitly and injecting them into the
+dependent bean is known as "auto-wiring".
+To instruct the spring container to perform auto-wiring for a particular bean, we make use of the "autowire"
+attribute inside the <bean> tag with any one of following values:
+1. no (default)
+2. byName
+3. byType
+4. constructor
+ In bean auto-wiring, spring container automatically injects a bean dependencies by either calling a setter
+method or calling parameterized constructor without writing explicitly inside the
+spring configuration file.
+

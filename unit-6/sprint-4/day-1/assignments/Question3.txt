@@ -1,0 +1,39 @@
+Q3/- What is the difference between WebApplication and Web-services?
+ans--Web Service
+W3C (World Wide Web Consortium) describes web service as a system of software allowing different machines to interact with each other through network. Web services achieve this task with the help of XML, SOAP, WSDL and UDDI open standards.
+
+XML:  The full form of XML is ‘Extensible Markup Language’ which is used to share data on the web and in universal format.
+
+SOAP: Standing for ‘Simple Object Access Protocol’ which is an application communication protocol that sends and receives messages through XML format. It is one of the best ways to communicate between applications over HTTP which is supported by all browsers and servers.
+
+WSDL: Written in XML, WSDL stands for Web Services Description Language and is used to describe web service. WSDL comprises three parts such as Definitions (usually expressed in XML including both data type definitions), Operations and Service bindings. Operations denote actions for the messages supported by a Web service.
+
+There are three types of operations:
+
+1. One way
+
+2. Request response
+
+3. Notification
+
+Service bindings:  Service bindings is a connecting to the port.
+
+UDDI: Universal Description, Discovery, and Integration (UDDI) provides the description of a set of services supporting the depiction and discovery of businesses, organizations, and other Web Services providers. It is based on common set of industry standards, including HTTP, XML, XML Schema, and SOAP.
+
+Web Application
+An application that the users access over the internet is called a web application. Generally, any software that is accessed through a client web browser could be called a web application.
+
+What is client?
+
+So what is a client? A ‘client’ can be referred to the program that the person use to run the application in the client-server environment. The client-server environment refers to multiple computers sharing information such as entering info into a database. Here the “client” is the application that is used to enter the info, while the “server” is the application that is used to store the information.
+
+Web Services vs Web Applications
+
+Web Services can be used to transfer data between Web Applications.
+Web Services can be accessed from any languages or platform.
+A Web Application is meant for humans to read, while a Web Service is meant for computers to read.
+Web Application is a complete Application with a Graphical User Interface (GUI), however, web services do not necessarily have a user interface since it is used as a component in an application.
+Web Application can be access through browsers.
+Our expertise lies in our in-depth knowledge, vast experience and exposure in automating business processes, offering effective web services and web applications solutions to transform them into your business objectives. We have an adept team with best of breed technologies to change the growth story of your business.
+
+Carmatec brings together multifaceted skill-set from the areas of design, behavioral science, usability, analytics, marketing and brand creation to provide businesses with holistic solutions for Web Design, Web & Mobile Development, Remote IT infrastructure management, Software Development, Managed IT services, Cloud Consulting, Internet Marketing and Branding.

@@ -1,0 +1,97 @@
+#navbar {
+    display: flex;
+    justify-content: right;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    background-color: rgb(18, 14, 83);
+    margin: 0%;
+    margin-left: 0%;
+   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+body{
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(39,41,45);
+}
+
+#navbar a{
+   margin: 12px;
+    text-decoration: none;
+    color: rgb(12, 6, 130);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 20px;
+    border-radius: 8px;
+}
+#navbar>a{
+    background-color: blueviolet;
+}
+#navbar>a+a{
+    background-color: rgb(226, 162, 43);
+}
+#navbar>a+a+a{
+    background-color: rgb(76, 226, 43);
+}
+
+#navbar a:hover{
+    background-color: rgb(235, 255, 253);
+}
+
+
+
+#Input {
+    margin: auto;
+    width: 15%;
+    margin-top: 15px;
+    background-color: rgb(52, 55, 60);
+    padding: 12px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+#Input {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6);
+    gap: 4%;
+}
+
+#Input>input {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: white;
+}
+
+#Input>input:hover {
+    border: 1px solid greenyellow;
+}
+
+#Input>input:last-child {
+    color: gray;
+}
+
+#Input button {
+    padding: 7px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: gray;
+}
+
+#Input button:hover {
+    border: 1px solid greenyellow;
+}
+
+#slideshow{
+    width: 20%;
+    margin: auto;
+    border: 1px solid red;
+    margin-top: 30px;
+}
+#slideshow img{
+    width: 100%;
+    margin: auto;
+}

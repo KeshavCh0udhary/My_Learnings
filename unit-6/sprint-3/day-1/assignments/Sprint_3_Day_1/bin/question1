@@ -1,0 +1,19 @@
+Q1/- What is the J2EE, list out some of the Application Server names.
+
+Ans---> 
+it is a specification from Oracle, and the implementation of this specification is  JDK s/w.
+J2EE stands for Java 2 enterprisse edition 
+
+J2EE stands for Java 2 Platform, Enterprise Edition. J2EE is the standard platform for 
+developing applications in the enterprise and is designed for enterprise applications that run
+ on servers. J2EE provides APIs that let developers create work flows and make use of resources 
+ such as databases or web services. J2EE consists of a set of APIs. Developers can use these APIs
+  to build applications for business computing.
+
+some of the Application server name are 
+
+1. WebLogic.
+2. Glassfish.
+3. JBoss Enterprise Application Platform.
+4. Apache Tomcat.
+5. and Apache Geronimo

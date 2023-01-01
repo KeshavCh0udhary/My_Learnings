@@ -1,0 +1,164 @@
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(28, 30, 32);
+}
+
+#navbar {
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    backdrop-filter: blur(1px);
+
+}
+
+#navbar input {
+    width: 250px;
+    padding: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: gold;
+    height: 45px;
+}
+
+#navbar input+input {
+    padding: 7px;
+    height: 30px;
+}
+
+#navbar input::placeholder {
+    color: gold;
+}
+
+#navbar input:hover {
+    border: 1px solid gold;
+}
+
+#movies {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5%;
+}
+
+
+#movies>div {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgb(39, 41, 45);
+    
+}
+
+#movies>div:hover {
+    border: 2px solid gold;
+}
+
+#movies>div img {
+    width: 100%;
+    height: 400px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#movies1 {
+    width: 90%;
+    margin: auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1%;
+}
+
+#movies1>div img {
+    width: 100%;
+    height: 225px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+#movies1>div {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    background-color: rgb(39, 41, 45);
+}
+
+#movies1>div:hover {
+    border: 2px solid gold;
+}
+
+#NoResult {
+    border-radius: 20px;
+    height: 100%;
+}
+
+#movies>div p {
+    margin-left: 10px;
+    color: gray;
+    line-height: 10px;
+}
+
+#movies>div h4 {
+    color: gold;
+    margin-left: 10px;
+}
+
+#movies1>div p {
+    margin-left: 10px;
+    color: gray;
+    font-size: 12px;
+}
+
+#movies1>div h4 {
+    color: gold;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+#NoResult {
+    border-radius: 20px;
+    height: 100%;
+}
+
+button {
+    width: 250px;
+    padding: 7px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+    background-color: black;
+    border: 1px solid transparent;
+    color: gold;
+    height: 45px;
+}
+
+button:hover {
+    border: 1px solid gold;
+}
+
+#movies1+button {
+
+    margin-left: 80px;
+    margin-right: 5px;
+}
+
+#NOResult{
+    width: 415%;
+    height: 150%;
+    font-size: xx-large;
+}
+#NOResult img{
+    width: 200%;
+}

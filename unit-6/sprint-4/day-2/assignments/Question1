@@ -1,0 +1,11 @@
+Q1/- What is a Servlet ? What is the role of the DispatcherServlet in the Spring boot rest
+application?
+
+ans--Spring is one of the most popular Java EE frameworks. It is an open-source lightweight framework that allows Java EE 7 developers to build simple, reliable, and scalable enterprise applications. This framework mainly focuses on providing various ways to help you manage your business objects. It made the development of Web applications much easier than compared to classic Java frameworks and application programming interfaces (APIs), such as Java database connectivity (JDBC), JavaServer Pages(JSP), and Java Servlet. This framework uses various new techniques such as Aspect-Oriented Programming (AOP), Plain Old Java Object (POJO), and dependency injection (DI), to develop enterprise applications. Now we are going to discuss one of the most important concepts in the Spring framework e.g Dispatcher Servlet.
+
+Dispatcher Servlet
+DispatcherServlet acts as the Front Controller for Spring-based web applications. So now what is Front Controller? So it is pretty simple. Any request is going to come into our website the front controller is going to stand in front and is going to accept all the requests and once the front controller accepts that request then this is the job of the front controller that it will make a decision that who is the right controller to handle that request. For example, refer to the below image. Suppose we have a website called student.com and the client is make a request to save student data by hitting the following URL student.com/save and its first come to the front controller and once the front controller accepts that request it is going to assign to the Controller_1 as this controller handle the request for /save operation. Then it is going to return back the response to the Client. 
+
+Dispatcher Servlet
+
+So now you might be thinking about how to create a front controller in a Spring MVC Application? But the good news is, the front controller is already created by the Spring Framework Developer, and the name of that particular controller is DispatcherServlet. You can use that front controller in your Spring MVC project. You really not required to create a front controller but you can reuse that front controller created by the Spring Framework Developer and they named it as DispatcherServlet. We can say

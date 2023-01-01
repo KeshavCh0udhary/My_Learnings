@@ -1,0 +1,37 @@
+Q4) Explain the difference between overloading and overriding methods with an example?
+
+Ans4)
+overloading                                         overriding
+=============                                      =============
+When two or more methods in the same class     When the method signature (name and parameters) 
+ have the same name but different parameters,  are the same in the superclass and the child class
+it’s called Overloading.						it’s called Overriding.
+
+Overloading occurs between the methods in the  method Overriding occurs between superclass and 
+same class.										subclass.
+
+
+Example Overriding
+==================
+class Vehicle{  
+  //defining a method  
+  void run(){
+  	System.out.println("Vehicle is running");
+  }  
+}  
+//Creating a child class  
+class Bike2 extends Vehicle{  
+  //defining the same method as in the parent class  
+  void run(){
+  	System.out.println("Bike is running safely");
+  }  
+  
+  public static void main(String args[]){  
+  	Bike2 obj = new Bike2();//creating object  
+  	obj.run();//calling method  
+  }  
+}  
+
+OUTPUT
+======
+Bike is running safely

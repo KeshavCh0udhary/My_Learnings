@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Database</title>
+  <link rel="stylesheet" href="commonStyles.css" />
+</head>
+
+<body>
+  <div id="links">
+    <div><a href="index.html">Home</a></div>
+    <div><a href="applied.html">Applied Jobs</a></div>
+    <div><a href="bookmark.html">Bookmarks</a></div>
+  </div>
+
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Job applied</th>
+          <th>Salary expected</th>
+          <th>Add to bookmark</th>
+        </tr>
+      </thead>
+      <tbody id="body">
+        <!-- Append your output to tbody -->
+      </tbody>
+    </table>
+  </main>
+</body>
+<script>
+  //you need to code here
+  let DetailsArr = JSON.parse(localStorage.getItem("jobList"))
+  document.querySelector("#filter").addEventListener("change", Filter)
+  //window.location.reload()
+  function Sort() {
+    let Select = document.querySelector("#sort").value;
+    if (Select == "asc") {
+      DetailsArr.sort(function (a, b) {
+        if (a.Name > b.Name) return 1
+        if (a.Name < b.Name) return -1
+        return 0
+      })
+      Display(DetailsArr);
+    }
+    if (Select == "des") {
+      DetailsArr.sort(function (a, b) {
+        if (a.Name > b.Name) return -1
+        if (a.Name < b.Name) return 1
+        return 0
+      })
+      Display(DetailsArr);
+    }
+  }
+  function sortingg() {
+    let Select = document.querySelector("#sortt").value;
+    if (Select == "asc") {
+      DetailsArr.sort(function (a, b) {
+        return a.Salary - b.Salary
+      })
+      Display(DetailsArr);
+    }
+    if (Select == "des") {
+      DetailsArr.sort(function (a, b) {
+        return b.Salary - a.Salary
+      })
+      Display(DetailsArr);
+    }
+  }
+
+  // document.querySelector("#filter").addEventListener("change",Filter)
+
+  function Filter() {
+    //console.log(3)
+    //window.location.reload()
+    let Selected = document.querySelector("#Filter").value
+    console.log(Selected)
+    if (Selected == "") { window.location.reload() }
+    else {
+      let res = DetailsArr.Filter(function (el) {
+        return (el.Role === Selected);
+      })
+      console.log(res)
+      Display(res)
+    }
+    //window.location.reload()
+  }
+
+  let bookmarkarr = JSON.parse(localStorage.getItem("bookmarks")) || [];
+  Display(DetailsArr);
+
+  function Display(DetailsArr) {
+    document.querySelector("tbody").innerHTML = ""
+    DetailsArr.forEach(function (el, index) {
+
+      let row = document.createElement("tr");
+      let td1 = document.createElement("td");
+      td1.innerText = el.Name;
+      let td2 = document.createElement("td");
+      td2.innerText = el.Mail;
+      let td3 = document.createElement("td");
+      td3.innerText = el.Role;
+      let td4 = document.createElement("td");
+      td4.innerText = el.Salary;
+      let td5 = document.createElement("td");
+      td5.innerText = "BOOKMARK"
+      td5.style.backgroundColor = "red"
+      td5.style.cursor = "pointer"
+      td5.style.fontWeight = "bold"
+      td5.addEventListener("click", function () {
+        runbook(el, index)
+        //event.target.parentNode.remove()
+
+      })
+
+      row.append(td1, td2, td3, td4, td5);
+      //console.log(row)
+      document.querySelector("#body").append(row)
+    })
+    function runbook(el, index) {
+      bookmarkarr.push(el);
+      localStorage.setItem("bookmarks", JSON.stringify(bookmarkarr))
+      DetailsArr.splice(index, 1)
+      localStorage.setItem("jobList", JSON.stringify(DetailsArr))
+      Display(DetailsArr)
+    }
+
+  }
+</script>
+
+</html>

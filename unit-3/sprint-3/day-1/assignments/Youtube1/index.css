@@ -1,0 +1,123 @@
+body {
+    margin-top: 0%;
+    margin-left: 0%;
+    margin-right: 0%;
+    background-color: rgb(19, 20, 20);
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background-color: rgb(40, 40, 40);
+    height: 50px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+#navbar img {
+    width: 7%;
+    height: 50px;
+}
+#navbar img:hover{
+   cursor: pointer;
+}
+
+#query {
+    margin-left: 50px;
+    background-color: black;
+    border: 1px solid transparent;
+}
+
+#query[type=text] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+}
+
+#query[type=text]:focus {
+    border: 1px solid deepskyblue;
+}
+#query::placeholder {
+    font-size: medium;
+}
+
+#click {
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    width: fit-content;
+    font-size: medium;
+    background-color: rgb(80, 78, 78);
+    
+}
+#click:hover {
+    color: deepskyblue;
+    cursor: pointer;
+}
+#Click{
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 0px solid transparent;
+    width: fit-content;
+    font-size: medium;
+    background-color: rgb(80, 78, 78);
+}
+#Click:hover {
+    color: deepskyblue;
+    cursor: pointer;
+}
+
+#SearchBar{
+  
+    width: 80%;
+    margin-left: 100px;
+}
+#Container {
+    width: 90%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.Card img {
+    width: 100%;
+    height: 200px;
+}
+
+.Card {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color:transparent;
+}
+
+.Card h3 {
+    font-size: small;
+    line-height: 22px;
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+}
+.Card h2 {
+    font-size: large;
+    color: white;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+
+
+

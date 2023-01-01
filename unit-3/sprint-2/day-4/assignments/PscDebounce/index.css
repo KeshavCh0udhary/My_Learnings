@@ -1,0 +1,103 @@
+body{
+    background-image: url("https://c.tenor.com/eeEA_cEAEbQAAAAC/stars-star.gif");
+}
+#container img{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    margin-left: 10px;
+}
+
+#container{
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin: auto;
+    margin-top: 150px;
+    display: grid;
+}
+#Query{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid transparent;
+    background-color: rgb(50, 50, 50);
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    color: gold;
+    border: 1px solid transparent;
+}
+#Query::placeholder{
+    color: deeppink;
+}
+
+
+
+#Results{
+    width: 107.105%;
+    color: rgb(28, 249, 220);
+    height: 200px;
+    overflow: scroll;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+#Results p:hover{
+color: gold;
+cursor: pointer;
+}
+#Results p{
+   margin-left: 10px;
+}
+
+#parent{
+    width: 50%;
+    margin: auto;
+    display: grid;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+#parent h1{
+   color: gold;
+   margin: auto;
+}
+#InsideDiv {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    line-height: 30px;
+    color: deepskyblue;
+}
+
+#InsideDiv>div {
+    border: solid gold;
+    padding: 40px;
+    border-radius: 20px;
+}
+
+#InsideDiv>div:hover {
+    cursor: pointer;
+    border-color: white;
+    color: white;
+}
+#Button {
+    margin: auto;
+    padding: 12px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: gold;
+    font-weight: bold;
+    font-size: 20px;
+    border-color: gold;
+    border-radius: 20px;
+    width:150px;
+}
+
+#Button:hover {
+    background-color: transparent;
+    cursor: pointer;
+    color: gold;
+}

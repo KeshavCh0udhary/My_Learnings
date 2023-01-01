@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>U2C3 Mock</title>
+  <style>
+    #report {
+      width: 80%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      grid-template-columns: repeat(4, 4fr);
+      gap: 20px;
+    }
+
+    #report>div {
+      box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+      border-radius: 20px;
+      padding: 20px;
+    }
+
+    button {
+      border: 1px solid transparent;
+      color: red;
+      border-radius: 8px;
+      font-size: 15px;
+      background-color: lightpink;
+    }
+
+
+    @media only screen and (min-width: 550px) and (max-width: 768px) {
+      #report {
+        width: 70%;
+        grid-template-columns: repeat(3, 3fr);
+        gap: 15px;
+      }
+
+    }
+
+    @media only screen and (min-width:0px) and (max-width: 549.9px) {
+      #report {
+        width: 60%;
+        grid-template-columns: repeat(2, 2fr);
+        gap: 15px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+  <form>
+    <select id="month">
+      <option value="January">JANUARY</option>
+      <option value="February">FEB</option>
+      <option value="MARCH">MARCH</option>
+      <option value="APRIL">APRIL</option>
+      <option value="MAY">MAY</option>
+      <option value="JUNE">JUNE</option>
+      <option value="JULY">JULY</option>
+      <option value="AUGUST">AUGUST</option>
+      <option value="SEPETEMBER">SEPETEMBER</option>
+      <option value="OCTOBER">OCTOBER</option>
+      <option value="NOVEMBER">NOVEMBER</option>
+      <option value="DECEMBER">DECEMBER</option>
+    </select>
+
+    <input id="income" type="number" placeholder="Enter Income" />
+
+    <input id="expense" type="number" placeholder="Enter expense" />
+
+    <input type="submit" />
+  </form>
+
+  <div id="report">
+    <!-- Append your cards here -->
+  </div>
+</body>
+
+</html>
+
+<script>
+
+  document.querySelector('form').addEventListener("submit", AddData);
+  function AddData(event) {
+    event.preventDefault();
+    let Month = document.querySelector("#month").value;
+    let Income = document.querySelector("#income").value;
+    let Expence = document.querySelector("#expense").value;
+
+    // let H1=document.div.innerHtml.createElement("h1");
+
+    let Divide = document.createElement("div");
+
+    let H1 = document.createElement("h1");
+    H1.innerText = Month;
+    Divide.append(H1);
+
+    let P1 = document.createElement("p");
+    P1.innerText = Income;
+    Divide.append(P1);
+
+    let P2 = document.createElement("p");
+    P2.innerText = Expence;
+    Divide.append(P2);
+
+    let Button = document.createElement("button");
+    Button.innerText = "Delete";
+    // Button.style.backgroundColor="transparent";
+    Divide.append(Button);
+
+    Button.addEventListener("click", Delete);
+
+
+    let H3 = document.createElement("h3");
+    if (Number(Income) < Number(Expence)) {
+      H3.innerText = "DEBT";
+      H3.style.color = "red";
+      Divide.append(H3);
+    }
+
+    else if (Number(Income) > Number(Expence)) {
+      H3.innerText = "SAVE";
+      Divide.append(H3);
+      Divide.style.backgroundColor = "black";
+      Divide.style.color = "white";
+      H3.style.color = "green";
+    }
+
+    else if (Number(Expence) === Number(Expence)) {
+      H3.innerText = "BREAKEVEN";
+      Divide.append(H3);
+      Divide.style.backgroundColor = "teal";
+      Divide.style.color = "black";
+      H3.style.color = "orange";
+    }
+    document.querySelector("#report").append(Divide);
+
+
+
+  }
+  function Delete(event) {
+    event.target.parentNode.remove();
+  }
+
+</script>
